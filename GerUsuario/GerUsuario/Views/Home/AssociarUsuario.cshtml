@@ -1,0 +1,20 @@
+﻿@model GerUsuario.Models.UsuarioRoles
+
+@{
+    ViewData["Title"] = "AssociarUsuario";
+}
+
+<h2>AssociarUsuario</h2>
+
+<form asp-action="AssociarUsuario">
+    <div>
+        <label asp-for="UsuarioId"></label>
+        <select asp-for="UsuarioId" asp-items="ViewBag.UsuarioId"></select>
+    </div>
+    <div>
+        <label asp-for="NivelAcessoId"></label>
+        <select asp-for="NivelAcessoId" asp-items="ViewBag.NivelAcessoId"></select>
+    </div>
+    <input type="submit" value="Adicionar" />
+</form>
+
